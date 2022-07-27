@@ -5,7 +5,10 @@ gopher:
 	@touch Dockerfile
 	@touch docker-compose.yml
 	@go mod init github.com/mikejeuga/$(repo)
+	@go get github.com/adamluzsi/testcase
+	@go get -u github.com/gorilla/mux
 	@go mod tidy
+
 
 run:
 	@go run ./cmd/main.go
