@@ -26,6 +26,10 @@ func (c PlayerStorage) Test(t *testing.T) {
 		assert.NoError(t, err)
 		player.ID = registeredPlayerID
 
+		players, err := storage.FindAll(ctx)
+		assert.NoError(t, err)
+		assert.Equal(t, 1, len(players))
+
 		registeredPlayer, Found, err := storage.FindByID(ctx, registeredPlayerID)
 		assert.NoError(t, err)
 		assert.True(t, Found)

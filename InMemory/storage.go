@@ -13,6 +13,11 @@ func (s *Storage) Create(ctx context.Context, player tennisclub.Player) (string,
 	panic("implement me")
 }
 
+func (s *Storage) FindAll(ctx context.Context) ([]tennisclub.Player, error) {
+	//TODO implement me
+	panic("implement me")
+}
+
 func (s *Storage) FindByID(ctx context.Context, id string) (tennisclub.Player, bool, error) {
 	//TODO implement me
 	panic("implement me")
